@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="container col-xxl-8 px-4 py-5">
@@ -22,9 +25,10 @@ const Hero = () => {
               Mental health support is essential for individuals to cope with the challenges of everyday life. It encompasses a range of services and resources designed to promote emotional well-being, resilience, and recovery from mental health issues.
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
+              <button 
                 type="button"
                 className="btn btn-primary btn-lg px-4 me-md-2 mt-3"
+                onClick={()=>{navigate("/dashboard")}}
               >
                 Try Now
               </button>
