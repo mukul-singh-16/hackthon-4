@@ -4,8 +4,6 @@ import Navbar from "./Navbar";
 import { useRecoilValue } from "recoil";
 import { sidbarrendervalue } from "../../store/atom/sidebarRender";
 import Chat from "../ChatApp/Chat";
-// import Info from "../CropSutablity/Info";
-
 const Dashboard = ({ sidebarToggle, setSidebarToggle }) => {
   const value = useRecoilValue(sidbarrendervalue);
 
@@ -19,7 +17,6 @@ const Dashboard = ({ sidebarToggle, setSidebarToggle }) => {
       {/* Main DashBoard Body */}
 
       {value == "news" && <News></News>}
-      
       {value == "chat" && <Chat></Chat>}
       {/* {value == "info" && <Info />} */}
     </div>
