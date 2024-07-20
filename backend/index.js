@@ -6,7 +6,9 @@ const landRoutes=require("./routes/landdetails")
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
+
 const User = require("./models/User");
+
 const cors = require("cors");
 const { Server } = require("socket.io");
 
@@ -27,7 +29,7 @@ app.use(cors());
 
 //session middleware
 const sessionConfig = {
-  secret: "hellonewsecret",
+  secret: "farmersecret",
   resave: false,
   saveUninitialized: true,
   cookie: {

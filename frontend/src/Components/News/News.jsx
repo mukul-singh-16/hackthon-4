@@ -11,6 +11,7 @@ const News = () => {
         const response = await axios.get(
           "https://newsapi.org/v2/everything?q=Farmer&sortBy=popularity&apiKey=dcc235505e3c4443b824a53a99b5db68"
         );
+        // console.log(response.data.articles)
         setNewsData(response.data.articles);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -26,6 +27,7 @@ const News = () => {
         <div className="row ">
           {newsData.map((article, index) => (
             <div className="col-md-4 mb-4" key={index}>
+            {article && 
               <Cards
                 title={article.title}
                 description={article.description}
@@ -33,6 +35,7 @@ const News = () => {
                 url={article.url}
                 publishedAt={article.publishedAt}
               />
+            }
             </div>
           ))}
         </div>
