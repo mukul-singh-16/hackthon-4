@@ -25,4 +25,12 @@ router.post("/login",passport.authenticate("local", {
   }
 );
 
+router.get("/login/sucess",(req,res)=>{
+  if(req.user)
+    res.status(200).json({"msg" :"user is loggedin", "user":req.user})
+  else
+    res.status(401).json({"msg" :"user is not loggedin"})
+
+})
+
 module.exports = router;

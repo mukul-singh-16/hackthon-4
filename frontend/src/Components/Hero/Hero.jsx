@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="container col-xxl-8 px-4 py-5">
@@ -25,9 +28,10 @@ const Hero = () => {
               thrrough our initiatives
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
+              <button 
                 type="button"
                 className="btn btn-primary btn-lg px-4 me-md-2 mt-3"
+                onClick={()=>{navigate("/dashboard")}}
               >
                 Try Now
               </button>

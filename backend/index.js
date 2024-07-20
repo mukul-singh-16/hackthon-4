@@ -27,7 +27,7 @@ app.use(cors());
 
 //session middleware
 const sessionConfig = {
-  secret: "farmersecret",
+  secret: "hellonewsecret",
   resave: false,
   saveUninitialized: true,
   cookie: {

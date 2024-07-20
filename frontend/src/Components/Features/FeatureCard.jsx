@@ -8,7 +8,7 @@ export const FeatureCard = (props) => {
             width="30"
             height="30"
             fill="currentColor"
-            class="bi bi-cloud-drizzle-fill"
+            className="bi bi-cloud-drizzle-fill"
             viewBox="0 0 16 16"
           >
             <path d={props.d} />
