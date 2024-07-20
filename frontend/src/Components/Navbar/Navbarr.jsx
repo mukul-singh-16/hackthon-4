@@ -10,7 +10,7 @@ const Navbarr = () => {
     <nav className="navbar navbar-expand-lg bg-transparent">
       <div className="container-fluid">
         <Link className="navbar-brand" to="#">
-          Farmer
+          MH-Buddy
         </Link>
         <button
           className="navbar-toggler"
@@ -29,6 +29,11 @@ const Navbarr = () => {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
                   Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/survey">
+                  Survey
                 </Link>
               </li>
               <li className="nav-item">

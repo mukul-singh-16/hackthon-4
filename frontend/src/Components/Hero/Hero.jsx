@@ -14,15 +14,12 @@ const Hero = () => {
               style={{ visibility: "hidden" }}
             />
           </div>
-          <div className="col-lg-6">
-            <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">
-              Cultivating a Resilient and Value-Driven Food System
+          <div className="col-lg-6 ">
+            <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-2 ">
+              Mental Health Support: A Vital Aspect of Overall Well-being
             </h1>
-            <p className="lead text-dark">
-              Welcome to Farmers-Friend, where we are dedicated to planting the
-              seeds of transformation in order to enhance the food system. We
-              firmly believe that small actions can lead to significant change
-              thrrough our initiatives
+            <p className="lead fw-bold">
+              Mental health support is essential for individuals to cope with the challenges of everyday life. It encompasses a range of services and resources designed to promote emotional well-being, resilience, and recovery from mental health issues.
             </p>
             <div className="d-grid gap-2 d-md-flex justify-content-md-start">
               <button

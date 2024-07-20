@@ -5,6 +5,7 @@
 .contactpage .text-lg {
   font-size: 36px;
 }
+
 .text-lg {
   font-size: 36px;
 }
@@ -12,6 +13,7 @@
 h1 {
   font-size: 36px;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -50,7 +52,7 @@ h1 {
 }
 
 .contact-form input[type="submit"] {
-  background-color: #fec33c;
+  background-color: #9D6EAF;
   color: black;
   padding: 10px 20px;
   border: none;

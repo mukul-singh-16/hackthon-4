@@ -7,25 +7,25 @@ const Messages = () => {
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
     const socketRef = useRef();
-    
+
 
     useEffect(() => {
         socketRef.current = io('http://localhost:3000'); // Replace with your server URL
-    
-        socketRef.current.on('recived-msg', (data) => {
-          setMessages((prevMessages) => [...prevMessages, data]);
-        });
-    
-        return () => {
-          socketRef.current.disconnect();
-        };
-      }, []);
 
-    
+        socketRef.current.on('recived-msg', (data) => {
+            setMessages((prevMessages) => [...prevMessages, data]);
+        });
+
+        return () => {
+            socketRef.current.disconnect();
+        };
+    }, []);
+
+
 
     const handleNewMessageChange = (e) => {
         setNewMessage(e.target.value);
-        
+
     };
 
     const handleSendMessage = () => {
@@ -49,7 +49,7 @@ const Messages = () => {
                         </svg>
                     </div>
                     <div className="flex-grow p-2">
-                        <div className="text-3xl text-gray-50 font-semibold">Farmers Community</div>
+                        <div className="text-3xl text-gray-50 font-semibold">Counsellor Community</div>
                     </div>
                     <div className="p-2 text-white cursor-pointer hover:bg-purple-500 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +59,7 @@ const Messages = () => {
                 </div>
             </div>
             <div className="w-full flex-grow bg-grey-400 dark:bg-gray-900 my-2 p-2 overflow-y-auto">
-            
+
                 {messages.map((msg, index) => (
                     <React.Fragment key={index}>
                         {msg.user === socketRef.current?.id ? (
@@ -86,12 +86,12 @@ const Messages = () => {
                             placeholder="Type your message ..."
                         />
                         <button onClick={handleSendMessage} className="bg-gray-100 dark:bg-gray-800 dark:text-gray-200 flex justify-center items-center pr-3 text-gray-400 rounded-r-md">
-                        
+
                             {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                             </svg> */}
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-6-6l6 6-6 6" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-6-6l6 6-6 6" />
                             </svg>
 
                         </button>

@@ -8,7 +8,7 @@ const Navbar = ({ sidebarToggle, setSidebarToggle }) => {
           className="text-white me-4 cursor-pointer"
           onClick={() => setSidebarToggle(!sidebarToggle)}
         />
-        <spna className="text-white font-semibold">Farmers-Friend</spna>
+        <spna className="text-white font-semibold">MH-Buddy</spna>
       </div>
       <div className="flex items-center gap-x-5">
         <div className="relative md:w-65">

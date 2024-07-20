@@ -15,6 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/community" element={<Chat></Chat>}></Route>
           <Route path="/dashboard" element={<Mainpanel />}></Route>
+          <Route path="/survey" element={<Mainpanel />}></Route>
           <Route path="*" element={<Wrongurl />}></Route>
         </Routes>
       </BrowserRouter>
